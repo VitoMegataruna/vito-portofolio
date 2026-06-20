@@ -18,7 +18,7 @@ export default function Hero() {
   useEffect(() => {
     const currentWord = words[i];
 
-    let timeout = setTimeout(() => {
+    const timeout = setTimeout(() => {
       if (isDeleting) {
         setText(currentWord.substring(0, j - 1));
         setJ(j - 1);

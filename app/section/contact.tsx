@@ -94,7 +94,7 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="text-secondary text-lg md:text-xl">
-            Let's connect and discuss your next project
+            Let&apos;s connect and discuss your next project
           </p>
         </div>
 
@@ -102,9 +102,9 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <p className="text-secondary text-lg leading-relaxed">
-              Have a question or project in mind? I'd love to hear from you.
-              Reach out through any of these channels, and I'll get back to you
-              as soon as possible.
+              Have a question or project in mind? I&apos;d love to hear from
+              you. Reach out through any of these channels, and I&apos;ll get
+              back to you as soon as possible.
             </p>
 
             {/* Contact Cards */}
@@ -144,7 +144,7 @@ export default function Contact() {
             {submitted && (
               <div className="mb-6 p-4 bg-green-100 border border-green-400 rounded-lg">
                 <p className="text-green-800 font-medium">
-                  ✓ Message sent successfully! I'll get back to you soon.
+                  ✓ Message sent successfully! I&apos;ll get back to you soon.
                 </p>
               </div>
             )}
