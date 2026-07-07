@@ -37,8 +37,9 @@ export default function Skill() {
 
   return (
     <section
+      id="skills"
       ref={sectionRef}
-      className={`w-full h-fit bg-index border-8 border-secondary p-6 transition-all duration-700 ease-in ${
+      className={`w-full h-fit bg-index border-8 border-secondary p-6 transition-all duration-700 ease-in scroll-mt-24 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >

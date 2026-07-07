@@ -6,7 +6,10 @@ import Reveal from "../component/Reveal";
 export default function About() {
   return (
     <Reveal>
-      <div className="h-fit md:h-screen w-full bg-secondary flex flex-col items-center text-4xl font-bold text-index pb-6">
+      <div
+        id="about"
+        className="h-fit md:h-screen w-full bg-secondary flex flex-col items-center text-4xl font-bold text-index pb-6 scroll-mt-24"
+      >
         <h1 className="text-4xl font-bold text-index mt-8 flex">About Me</h1>
         <Image
           src="/assets/divider.png"

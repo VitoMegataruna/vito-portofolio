@@ -19,7 +19,10 @@ const steps = [
 export default function Proexp() {
   return (
     <Reveal>
-      <section className="w-full bg-secondary py-12 text-index">
+      <section
+        className="w-full bg-secondary py-12 text-index"
+        id="professional"
+      >
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="text-4xl font-bold text-index mb-6">Experiences</h2>
           <p className="max-w-2xl text-lg text-index/80 mb-10">

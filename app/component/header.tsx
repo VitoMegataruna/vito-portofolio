@@ -17,11 +17,39 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (!href.startsWith("#")) return;
+
+    event.preventDefault();
+
+    const targetId = href.slice(1);
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      const headerOffset = 96;
+      const elementPosition =
+        target.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+
+    window.history.pushState(null, "", href);
+    setIsOpen(false);
+  };
+
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#professional" },
+    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -57,6 +85,7 @@ export default function Header() {
                   ? "text-white/90 hover:text-white"
                   : "text-secondary hover:text-secondary-alt"
               }`}
+              onClick={(event) => handleNavClick(event, item.href)}
             >
               {item.label}
             </Link>
@@ -72,6 +101,7 @@ export default function Header() {
                 ? "bg-secondary text-white hover:bg-secondary-alt"
                 : "bg-secondary-alt text-white hover:bg-secondary"
             }`}
+            onClick={(event) => handleNavClick(event, "#contact")}
           >
             Get in Touch
           </Link>
@@ -118,7 +148,7 @@ export default function Header() {
                 className={`font-medium py-2 transition-colors duration-200 ${
                   isScrolled ? "text-white/90" : "text-secondary-alt"
                 }`}
-                onClick={() => setIsOpen(false)}
+                onClick={(event) => handleNavClick(event, item.href)}
               >
                 {item.label}
               </Link>
@@ -130,7 +160,7 @@ export default function Header() {
                   ? "bg-secondary text-white hover:bg-secondary-alt"
                   : "bg-secondary-alt text-white hover:bg-secondary"
               }`}
-              onClick={() => setIsOpen(false)}
+              onClick={(event) => handleNavClick(event, "#contact")}
             >
               Get in Touch
             </Link>

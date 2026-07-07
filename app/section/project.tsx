@@ -52,7 +52,10 @@ const projects: Project[] = [
 export default function Project() {
   return (
     <Reveal>
-      <section id="projects" className="w-full py-16 md:py-24 px-4 bg-index/30">
+      <section
+        id="projects"
+        className="w-full py-16 md:py-24 px-4 bg-index/30 scroll-mt-24"
+      >
         <div className="w-full max-w-screen-xl mx-auto">
           {/* Section Title */}
           <div className="text-center mb-12 md:mb-16">

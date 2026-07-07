@@ -88,7 +88,10 @@ export default function Contact() {
 
   return (
     <Reveal>
-      <section id="contact" className="w-full py-16 md:py-24 px-4 bg-white">
+      <section
+        id="contact"
+        className="w-full py-16 md:py-24 px-4 bg-white scroll-mt-24"
+      >
         <div className="w-full max-w-screen-xl mx-auto">
           {/* Section Title */}
           <div className="text-center mb-12 md:mb-16">
